@@ -31,6 +31,7 @@
 - 安装 YouCompleteMe 智能补全
 
 > cd  .vim/bundle/YouCompleteMe/
+
 > python install.py
 
 - 增加 CPP 模板补全
