@@ -8,6 +8,7 @@
 > cd vim/
     
 > sudo apt-get install python-dev、python3-dev、ruby-dev、liblua5.3-dev、libx11-dev、libgtk2.0-dev、libgtk-3-dev、libncurses-dev
+    
     - 注意：下一步，中的 --with-python-config-dir= 需要改成自己电脑的python 路径，
     
 > ./configure --with-features=huge --enable-pythoninterp --enable-rubyinterp --enable-luainterp --enable-perlinterp --with-python-config-dir=/usr/lib/python2.7/config/ --enable-gui=gtk2 --enable-cscope --prefix=/usr
