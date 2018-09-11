@@ -21,7 +21,7 @@ endsnippet
 # else if 
 snippet ei 
 else if (${1:/* condition */}) { 
-	${2:TODO} 
+    ${2:TODO} 
 } 
 endsnippet 
 # else 
@@ -50,16 +50,16 @@ endsnippet
 snippet sw 
 switch (${1:/* condition */}) { 
     case ${2:c}: { 
-	} 
-	break; 
+    } 
+    break; 
 
     default: { 
-	} 
-	break; 
-	} 
+    } 
+    break; 
+} 
 endsnippet 
 # 通过迭代器遍历容器（可读写） 
-snippet for 
+snippet FOR 
 for (auto ${2:iter} = ${1:c}.begin(); ${3:$2} != $1.end(); ${4:++iter}) {
     ${5:TODO} 
 } 
@@ -87,8 +87,8 @@ for (const auto& e : ${1:c}) {
 } 
 endsnippet 
 # For Loop 
-snippet FOR 
-for (unsigned ${2:i} = 0; $2 < ${1:count}; ${3:++}$2) { 
+snippet for 
+for (unsigned ${2:i} = 0; $2 < ${1:count}; $2${3:++}) { 
     ${4:TODO} 
 } 
 endsnippet 
@@ -132,16 +132,16 @@ snippet cl
 class ${1:`Filename('$1_t', 'name')`} 
 { 
     public: 
-		$1 (); 
-		virtual ~$1 (); 
-			         
-	private: 
+        $1 (); 
+        virtual ~$1 (); 
+         
+    private: 
 }; 
 endsnippet 
 #================================= 
 #结对符 
 #================================= 
-# 括号 bracket 
+ # 括号 bracket 
 snippet b "bracket" i 
 (${1})${2} 
 endsnippet 
@@ -152,7 +152,7 @@ endsnippet
 # 大括号 brace 
 snippet br "brace" i 
 { 
-	${1} 
+    ${1} 
 }${2} 
 endsnippet 
 # 单引号 single quote，设定为 se 而非 sq，避免与 q 冲突
