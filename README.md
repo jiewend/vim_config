@@ -7,7 +7,7 @@
     
 > cd vim/
     
-> sudo apt-get install python-dev python3-dev ruby-dev liblua5.3-dev libx11-dev libgtk2.0-dev libgtk-3-dev libncurses-dev
+> sudo apt-get install python-dev python3-dev ruby-dev liblua5.3-dev libx11-dev libgtk2.0-dev libgtk-3-dev libncurses-dev ctags cmake
     
     - 注意：下一步，中的 --with-python-config-dir= 需要改成自己电脑的python 路径，
     
@@ -26,13 +26,17 @@
     - 进入 vim ,输入:PluginInstall,即开始下载插件，YouCompleteMe 需要下载后手动安装
     - 注意，YouCompleteMe 插件有时候会下载特别慢，建议另外下载安装，将 .vimrc 中  Plugin 'Valloric/YouCompleteMe' 注释掉，另外下载 YouCompleteMe 
 
-> git clone git@github.com:Valloric/YouCompleteMe.git ~/.vim/bundle/
+> git clone git@github.com:Valloric/YouCompleteMe.git ~/.vim/bundle/YouCompleteMe
 
 - 安装 YouCompleteMe 智能补全
 
 > cd  .vim/bundle/YouCompleteMe/
-
+> git submodule update --init --recursive
 > python install.py
+    - 注意，假如是使用 git clone 方式下载YouCompleteMe 插件的话，需要额外进行以下步骤
+        - > vim ~/.vimrc
+        - > 将 Plugin 'Valloric/YouCompleteMe' 注释去除
+        - > PluginInstall
 
 - 增加 CPP 模板补全
     - 在 ~/.vim/bundle/ultisnips/mysnippets 目录下新增cpp.snippets文件，文件见本仓库
