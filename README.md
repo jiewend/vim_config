@@ -34,7 +34,7 @@
 > git submodule update --init --recursive
 > python install.py
 
-- 注意，假如是使用 git clone 方式下载YouCompleteMe 插件的话，需要额外进行以下步骤
+- 注意，假如使用 git clone 方式下载YouCompleteMe 插件，需要额外进行以下步骤
 > vim ~/.vimrc
 
 > 将 Plugin 'Valloric/YouCompleteMe' 注释去除
