@@ -36,7 +36,9 @@
 
 - 注意，假如是使用 git clone 方式下载YouCompleteMe 插件的话，需要额外进行以下步骤
 > vim ~/.vimrc
+
 > 将 Plugin 'Valloric/YouCompleteMe' 注释去除
+
 > PluginInstall
 
 - 增加 CPP 模板补全
