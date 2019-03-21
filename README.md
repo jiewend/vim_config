@@ -33,10 +33,11 @@
 > cd  .vim/bundle/YouCompleteMe/
 > git submodule update --init --recursive
 > python install.py
-    - 注意，假如是使用 git clone 方式下载YouCompleteMe 插件的话，需要额外进行以下步骤
-        - > vim ~/.vimrc
-        - > 将 Plugin 'Valloric/YouCompleteMe' 注释去除
-        - > PluginInstall
+
+- 注意，假如是使用 git clone 方式下载YouCompleteMe 插件的话，需要额外进行以下步骤
+> vim ~/.vimrc
+> 将 Plugin 'Valloric/YouCompleteMe' 注释去除
+> PluginInstall
 
 - 增加 CPP 模板补全
     - 在 ~/.vim/bundle/ultisnips/mysnippets 目录下新增cpp.snippets文件，文件见本仓库
