@@ -31,7 +31,9 @@
 - 安装 YouCompleteMe 智能补全
 
 > cd  .vim/bundle/YouCompleteMe/
+
 > git submodule update --init --recursive
+
 > python install.py
 
 - 注意，假如使用 git clone 方式下载YouCompleteMe 插件，需要额外进行以下步骤
