@@ -6,12 +6,12 @@ syntax on
 syntax keyword cppSTLtype initializer_list
 "set clipboard=unnamedplus
 
-"let mapleader="\\"
+let mapleader="\\"
 "set term=ansi
 " 设置快捷键将选中文本块复制至系统剪贴板
 "vnoremap  <Leader>y "+y
 " " 设置快捷键将系统剪贴板内容粘贴至 vim
-"nmap <Leader>p "+p
+nmap <leader>p "+p
 
 
 "vundle 环境设置
@@ -79,12 +79,10 @@ set cursorline
 "set cursorcolumn
 " 高亮显示搜索结果
 set hlsearch
-
 " 禁止折行
 set wrap
 
 let g:Powerline_colorscheme='solarized256'
-
 
 " 自适应不同语言的智能缩进
 filetype indent on
@@ -96,6 +94,46 @@ set tabstop=4
 set shiftwidth=4
 " 让 vim 把连续数量的空格视为一个制表符
 set softtabstop=4
+
+" ycm 和 backspace 相兼容
+set backspace=indent,eol,start
+"**************************************************************
+" 使用 NERDTree 插件查看工程文件。设置快捷键，速记：file list
+nmap <silent> <F10> :NERDTreeToggle<CR>
+" 设置NERDTree子窗口宽度
+let NERDTreeWinSize=32
+" 设置NERDTree子窗口位置
+let NERDTreeWinPos="right"
+" 显示隐藏文件
+let NERDTreeShowHidden=1
+" NERDTree 子窗口中不显示冗余帮助信息
+let NERDTreeMinimalUI=1
+" 删除文件时自动删除文件对应 buffer
+let NERDTreeAutoDeleteBuffer=1
+"*************************************************************
+" 显示/隐藏 MiniBufExplorer 窗口
+map <silent> <F11> :MBEToggle<CR>
+" buffer 切换快捷键
+map <C-Tab> :MBEbn<cr>
+map <C-S-Tab> :MBEbp<cr>
+"************************************************************
+" 基于缩进或语法进行代码折叠
+set foldmethod=indent
+"set foldmethod=syntax
+" 启动 vim 时关闭折叠代码
+set nofoldenable
+"************************************************************
+"大纲浏览 TagBar
+"按F9即可打开tagbar界面
+nmap <silent> <F9> :TagbarToggle<CR>
+" "设置tagbar的宽度为30列，默认40
+let g:tagbar_width = 30     
+" tagbar 子窗口中不显示冗余帮助信息 
+let g:tagbar_compact=1
+
+
+" 设置 gvim 显示字体
+set guifont=YaHei\ Consolas\ Hybrid\ 11.5
 
 
 "UltiSnips 的 tab 键与 YCM 冲突，重新设定
